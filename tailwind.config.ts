@@ -101,6 +101,21 @@ export default {
 				brandGlow: {
 					'0%, 100%': { filter: 'brightness(1)' },
 					'50%': { filter: 'brightness(1.1)' }
+				},
+				liquidFlow: {
+					'0%, 100%': {
+						transform: 'translateX(0%) rotate(0deg)',
+						borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%'
+					},
+					'50%': {
+						transform: 'translateX(5%) rotate(180deg)',
+						borderRadius: '30% 60% 70% 40%/50% 60% 30% 60%'
+					}
+				},
+				colorShift: {
+					'0%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+					'100%': { backgroundPosition: '0% 50%' }
 				}
 			},
 			animation: {
@@ -108,7 +123,9 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fadeIn 0.6s ease-out',
 				'slide-up': 'slideUp 0.6s ease-out',
-				'brand-glow': 'brandGlow 3s ease-in-out infinite'
+				'brand-glow': 'brandGlow 3s ease-in-out infinite',
+				'liquid-flow': 'liquidFlow 4s ease-in-out infinite',
+				'color-shift': 'colorShift 6s ease-in-out infinite'
 			}
 		}
 	},
