@@ -49,21 +49,21 @@ const About = () => {
       
       <main className="pt-24">
         {/* Header Section */}
-        <section className="py-16 bg-gradient-to-b from-background to-muted">
+        <section className="py-16">
           <div className="container mx-auto px-6">
             <div className="flex items-center justify-between mb-8">
               <Button asChild variant="outline" className="flex items-center gap-2">
                 <Link to="/">
                   <Home className="h-4 w-4" />
-                  Home
+                  <span className="bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent animate-color-shift">Home</span>
                 </Link>
               </Button>
             </div>
             <div className="text-center">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                About <span className="text-brand-blue">Us</span>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent animate-color-shift">
+                About Us
               </h1>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-xl max-w-2xl mx-auto bg-gradient-to-r from-orange-500 via-blue-500 to-green-500 bg-clip-text text-transparent">
                 We're a passionate team of creatives dedicated to bringing your brand's story to life through compelling visual content.
               </p>
             </div>
@@ -74,22 +74,22 @@ const About = () => {
         <section className="py-16">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
-              <Card className="p-8 shadow-xl">
+              <Card className="p-8 shadow-xl backdrop-blur-xl bg-white/10 border border-white/20">
                 <CardContent className="space-y-6">
-                  <h2 className="text-3xl font-bold text-foreground mb-6 text-center">
+                  <h2 className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-green-400 via-blue-400 to-orange-400 bg-clip-text text-transparent animate-color-shift">
                     Our Story
                   </h2>
                   
                   <div className="grid md:grid-cols-2 gap-8 items-center">
                     <div className="space-y-4">
-                      <p className="text-lg text-muted-foreground leading-relaxed">
+                      <p className="text-lg leading-relaxed bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent">
                         Founded in 2018, Love Regality Productions emerged from a simple belief: 
                         every brand has a unique story worth telling. We specialize in creating 
                         commercials that don't just sell products, but build emotional connections 
                         between brands and their audiences.
                       </p>
                       
-                      <p className="text-lg text-muted-foreground leading-relaxed">
+                      <p className="text-lg leading-relaxed bg-gradient-to-r from-orange-400 via-blue-400 to-green-400 bg-clip-text text-transparent">
                         Our approach combines cutting-edge technology with timeless storytelling 
                         principles. We believe that the best commercials are the ones people 
                         actually want to watch, share, and remember.
@@ -97,9 +97,9 @@ const About = () => {
                     </div>
                     
                     <div className="space-y-4">
-                      <div className="bg-gradient-to-r from-brand-orange to-brand-blue p-6 rounded-lg text-white">
-                        <h3 className="text-2xl font-bold mb-2">Our Mission</h3>
-                        <p className="text-lg opacity-90">
+                      <div className="bg-gradient-to-r from-orange-400 to-blue-400 p-6 rounded-lg text-white backdrop-blur-xl">
+                        <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-green-400 via-blue-400 to-orange-400 bg-clip-text text-transparent">Our Mission</h3>
+                        <p className="text-lg bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent">
                           To create visual content that not only captures attention but also 
                           drives meaningful engagement and lasting brand impact.
                         </p>
@@ -107,16 +107,16 @@ const About = () => {
                       
                       <div className="grid grid-cols-3 gap-4 text-center">
                         <div>
-                          <div className="text-3xl font-bold text-brand-orange">150+</div>
-                          <div className="text-sm text-muted-foreground">Projects</div>
+                          <div className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">150+</div>
+                          <div className="text-sm bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">Projects</div>
                         </div>
                         <div>
-                          <div className="text-3xl font-bold text-brand-blue">50+</div>
-                          <div className="text-sm text-muted-foreground">Clients</div>
+                          <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">50+</div>
+                          <div className="text-sm bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Clients</div>
                         </div>
                         <div>
-                          <div className="text-3xl font-bold text-brand-green">5</div>
-                          <div className="text-sm text-muted-foreground">Years</div>
+                          <div className="text-3xl font-bold bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">5</div>
+                          <div className="text-sm bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Years</div>
                         </div>
                       </div>
                     </div>
@@ -128,13 +128,13 @@ const About = () => {
         </section>
 
         {/* Team Section */}
-        <section className="py-16 bg-muted">
+        <section className="py-16">
           <div className="container mx-auto px-6">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-foreground mb-4">
-                Meet Our <span className="text-brand-green">Team</span>
+              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 via-orange-400 to-blue-400 bg-clip-text text-transparent animate-color-shift">
+                Meet Our Team
               </h2>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-xl bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent">
                 The creative minds behind our award-winning productions
               </p>
             </div>
