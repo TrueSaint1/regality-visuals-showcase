@@ -14,23 +14,17 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-muted to-background">
         <div className="container mx-auto px-6 text-center">
           <div className="space-y-8 animate-fade-in">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-tight tracking-tight text-center">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-center">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent block text-center">
                 Hello. We're Love Regality Productions
               </span>
             </h1>
             
             <div className="space-y-6 max-w-4xl mx-auto text-center">
-              <p className="text-3xl md:text-4xl font-medium leading-relaxed text-center">
+              <p className="text-xl md:text-2xl font-medium leading-relaxed text-center">
                 <span className="text-cyan-400">We make commercials.</span>{" "}
                 <span className="text-blue-500">The kind people</span>{" "}
                 <span className="text-orange-500">like.</span>
-              </p>
-            </div>
-            
-            <div className="space-y-4 text-center">
-              <p className="text-foreground text-xl text-center">
-                Scroll down to see some.
               </p>
             </div>
           </div>
