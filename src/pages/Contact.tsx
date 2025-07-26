@@ -119,21 +119,21 @@ Looking forward to hearing from you!`;
       
       <main className="pt-24">
         {/* Header Section */}
-        <section className="py-16">
+        <section className="py-16 bg-gradient-to-b from-background to-muted">
           <div className="container mx-auto px-6">
             <div className="flex items-center justify-between mb-8">
               <Button asChild variant="outline" className="flex items-center gap-2">
                 <Link to="/">
                   <Home className="h-4 w-4" />
-                  <span className="bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent animate-color-shift">Home</span>
+                  Home
                 </Link>
               </Button>
             </div>
             <div className="text-center">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 via-orange-400 to-blue-400 bg-clip-text text-transparent animate-color-shift">
-                Get in Touch
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                Get in <span className="text-brand-green">Touch</span>
               </h1>
-              <p className="text-xl max-w-2xl mx-auto bg-gradient-to-r from-blue-500 via-green-500 to-orange-500 bg-clip-text text-transparent">
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Ready to bring your vision to life? Let's discuss your project and create something amazing together.
               </p>
             </div>
@@ -146,12 +146,12 @@ Looking forward to hearing from you!`;
             <div className="grid lg:grid-cols-3 gap-12">
               {/* Contact Form */}
               <div className="lg:col-span-2">
-                <Card className="shadow-xl backdrop-blur-xl bg-white/10 border border-white/20">
+                <Card className="shadow-xl">
                   <CardHeader>
-                    <CardTitle className="text-2xl bg-gradient-to-r from-orange-400 via-blue-400 to-green-400 bg-clip-text text-transparent animate-color-shift">
+                    <CardTitle className="text-2xl text-foreground">
                       Tell us about your project
                     </CardTitle>
-                    <p className="bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent">
+                    <p className="text-muted-foreground">
                       Fill out the form below and we'll get back to you within 24 hours via WhatsApp.
                     </p>
                   </CardHeader>
