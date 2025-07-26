@@ -11,25 +11,21 @@ const Index = () => {
       <Navigation />
       
       {/* First Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-background to-muted">
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-muted to-background">
         <div className="container mx-auto px-6 text-center">
-          <div className="space-y-8 animate-fade-in">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
-              <span className="text-foreground">Hello. We're </span>
-              <span className="bg-gradient-to-r from-brand-orange via-brand-blue to-brand-green bg-clip-text text-transparent animate-brand-glow">
+          <div className="space-y-12 animate-fade-in">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-tight tracking-tight">
+              <span className="text-foreground block mb-4">Hello. We're</span>
+              <span className="bg-gradient-to-r from-brand-orange via-brand-blue to-brand-green bg-clip-text text-transparent animate-brand-glow block">
                 Love Regality Productions
               </span>
             </h1>
             
-            <div className="space-y-4">
-              <p className="text-2xl md:text-3xl text-foreground font-medium">
+            <div className="space-y-6 max-w-4xl mx-auto">
+              <p className="text-3xl md:text-4xl text-foreground font-medium leading-relaxed">
                 We make commercials. <span className="text-brand-blue">The kind</span> <span className="text-brand-orange">people like.</span>
               </p>
             </div>
-            
-            <p className="text-muted-foreground text-lg">
-              Scroll down to see some.
-            </p>
           </div>
         </div>
         
@@ -50,25 +46,25 @@ const Index = () => {
         </video>
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 z-10"></div>
         
         <div className="relative z-20 container mx-auto px-6 text-center">
-          <div className="space-y-12 animate-slide-up">
-            <div className="space-y-6">
-              <h2 className="text-4xl md:text-6xl font-bold text-white">
+          <div className="space-y-16 animate-slide-up">
+            <div className="space-y-8">
+              <h2 className="text-5xl md:text-7xl font-bold text-white leading-tight tracking-tight">
                 Bringing Stories to Life
               </h2>
-              <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl text-white/95 max-w-4xl mx-auto leading-relaxed font-light">
                 From concept to creation, we craft visual narratives that captivate, 
                 inspire, and drive results for brands that dare to be different.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button 
                 asChild 
                 size="lg" 
-                className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8 py-6 text-lg"
+                className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-10 py-7 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <Link to="/work">
                   View Our Work
@@ -80,7 +76,7 @@ const Index = () => {
                 asChild 
                 variant="outline" 
                 size="lg"
-                className="border-white text-white hover:bg-white/10 font-semibold px-8 py-6 text-lg backdrop-blur-sm"
+                className="border-2 border-white text-white hover:bg-white hover:text-black font-semibold px-10 py-7 text-lg rounded-full backdrop-blur-sm bg-white/10 transition-all duration-300 transform hover:scale-105"
               >
                 <Link to="/about">
                   Learn About Us
