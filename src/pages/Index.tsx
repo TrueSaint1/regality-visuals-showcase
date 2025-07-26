@@ -11,21 +11,39 @@ const Index = () => {
       <Navigation />
       
       {/* First Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-background to-muted">
-        <div className="container mx-auto px-6 text-center">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+        </video>
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
+        
+        <div className="relative z-20 container mx-auto px-6 text-center">
           <div className="space-y-8 animate-fade-in">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
-              <span className="text-foreground">Hello. We're </span>
+              <span className="text-white">Hello. We're </span>
               <span className="bg-gradient-to-r from-brand-orange via-brand-blue to-brand-green bg-clip-text text-transparent animate-brand-glow">
                 Love Regality Productions
               </span>
             </h1>
             
             <div className="space-y-4">
-              <p className="text-2xl md:text-3xl text-foreground font-medium">
-                We make commercials. The kind people like.
+              <p className="text-2xl md:text-3xl text-white font-medium">
+                We make commercials. <span className="text-brand-blue">The kind</span> <span className="text-brand-orange">people like.</span>
               </p>
             </div>
+            
+            <p className="text-white/80 text-lg">
+              Scroll down to see some.
+            </p>
           </div>
         </div>
         

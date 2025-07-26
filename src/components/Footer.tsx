@@ -30,21 +30,18 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="bg-brand-orange">
       <div className="container mx-auto px-6 py-12">
         <div className="text-center space-y-8">
-          {/* Logo and Company Name */}
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-foreground">
-              Love Regality Productions
-            </h3>
-            <p className="text-muted-foreground text-lg">
-              Creating commercials that people love
+          {/* Copyright */}
+          <div>
+            <p className="text-white text-lg font-medium">
+              © {new Date().getFullYear()} Love Regality Productions. All rights reserved.
             </p>
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex justify-center space-x-6">
+          <div className="flex justify-center space-x-8">
             {socialLinks.map((social) => {
               const IconComponent = social.icon;
               return (
@@ -53,7 +50,7 @@ const Footer = () => {
                   variant="ghost"
                   size="icon"
                   asChild
-                  className={`text-muted-foreground transition-colors ${social.color}`}
+                  className="text-white hover:text-white/80 transition-colors"
                 >
                   <a
                     href={social.url}
@@ -61,18 +58,11 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     aria-label={social.name}
                   >
-                    <IconComponent className="h-6 w-6" />
+                    <IconComponent className="h-8 w-8" />
                   </a>
                 </Button>
               );
             })}
-          </div>
-
-          {/* Copyright */}
-          <div className="border-t border-border pt-8">
-            <p className="text-muted-foreground">
-              © {new Date().getFullYear()} Love Regality Productions. All rights reserved.
-            </p>
           </div>
         </div>
       </div>

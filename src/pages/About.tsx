@@ -2,6 +2,9 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Home } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const teamMembers = [
@@ -47,13 +50,23 @@ const About = () => {
       <main className="pt-24">
         {/* Header Section */}
         <section className="py-16 bg-gradient-to-b from-background to-muted">
-          <div className="container mx-auto px-6 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              About <span className="text-brand-blue">Us</span>
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              We're a passionate team of creatives dedicated to bringing your brand's story to life through compelling visual content.
-            </p>
+          <div className="container mx-auto px-6">
+            <div className="flex items-center justify-between mb-8">
+              <Button asChild variant="outline" className="flex items-center gap-2">
+                <Link to="/">
+                  <Home className="h-4 w-4" />
+                  Home
+                </Link>
+              </Button>
+            </div>
+            <div className="text-center">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                About <span className="text-brand-blue">Us</span>
+              </h1>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                We're a passionate team of creatives dedicated to bringing your brand's story to life through compelling visual content.
+              </p>
+            </div>
           </div>
         </section>
 
