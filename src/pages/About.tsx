@@ -35,12 +35,12 @@ const About = () => {
   ];
 
   const clients = [
-    { name: "TechCorp", logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=100&fit=crop" },
-    { name: "StyleBrand", logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=100&fit=crop" },
-    { name: "FoodieChain", logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=100&fit=crop" },
-    { name: "GlobalBank", logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=100&fit=crop" },
-    { name: "EcoGreen", logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=100&fit=crop" },
-    { name: "HealthPlus", logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=100&fit=crop" }
+    { name: "TechCorp", logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=200&h=200&fit=crop" },
+    { name: "StyleBrand", logo: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=200&h=200&fit=crop" },
+    { name: "FoodieChain", logo: "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=200&h=200&fit=crop" },
+    { name: "GlobalBank", logo: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=200&h=200&fit=crop" },
+    { name: "EcoGreen", logo: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=200&h=200&fit=crop" },
+    { name: "HealthPlus", logo: "https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151?w=200&h=200&fit=crop" }
   ];
 
   return (
@@ -183,10 +183,12 @@ const About = () => {
                 <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
                   <CardContent className="flex items-center justify-center">
                     <div className="text-center">
-                      <div className="w-16 h-16 bg-muted rounded-lg flex items-center justify-center mx-auto mb-2">
-                        <span className="text-2xl font-bold text-muted-foreground">
-                          {client.name.slice(0, 2)}
-                        </span>
+                      <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-3 border-2 border-muted">
+                        <img 
+                          src={client.logo} 
+                          alt={client.name}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                       <p className="text-sm font-medium text-foreground">
                         {client.name}
