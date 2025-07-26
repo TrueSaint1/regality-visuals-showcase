@@ -260,7 +260,7 @@ Looking forward to hearing from you!`;
               <div className="space-y-6">
                 <Card className="shadow-lg">
                   <CardHeader>
-                    <CardTitle className="text-xl text-foreground">
+                    <CardTitle className="text-xl bg-gradient-to-r from-green-400 via-blue-400 to-orange-400 bg-clip-text text-transparent animate-color-shift">
                       Contact Information
                     </CardTitle>
                   </CardHeader>
@@ -275,20 +275,20 @@ Looking forward to hearing from you!`;
                             </div>
                           </div>
                           <div>
-                            <h3 className="font-semibold text-foreground">
+                            <h3 className="font-semibold bg-gradient-to-r from-orange-400 via-blue-400 to-green-400 bg-clip-text text-transparent">
                               {info.title}
                             </h3>
                             {info.action ? (
                               <a
                                 href={info.action}
-                                className="text-muted-foreground hover:text-brand-orange transition-colors"
+                                className="bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent hover:from-orange-400 hover:via-blue-400 hover:to-green-400 transition-all duration-300"
                                 target={info.action.startsWith('http') ? '_blank' : undefined}
                                 rel={info.action.startsWith('http') ? 'noopener noreferrer' : undefined}
                               >
                                 {info.content}
                               </a>
                             ) : (
-                              <p className="text-muted-foreground">{info.content}</p>
+                              <p className="bg-gradient-to-r from-green-400 via-blue-400 to-orange-400 bg-clip-text text-transparent">{info.content}</p>
                             )}
                           </div>
                         </div>
@@ -299,10 +299,10 @@ Looking forward to hearing from you!`;
 
                 <Card className="shadow-lg bg-gradient-to-br from-brand-blue/10 to-brand-green/10">
                   <CardContent className="p-6">
-                    <h3 className="font-bold text-foreground mb-2">
+                    <h3 className="font-bold mb-2 bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent animate-color-shift">
                       Why Choose Us?
                     </h3>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
+                    <ul className="space-y-2 text-sm bg-gradient-to-r from-orange-400 via-blue-400 to-green-400 bg-clip-text text-transparent">
                       <li>• 24-hour response time</li>
                       <li>• Free initial consultation</li>
                       <li>• Flexible payment options</li>

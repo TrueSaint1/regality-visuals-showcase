@@ -149,14 +149,14 @@ const About = () => {
                         alt={member.name}
                         className="w-32 h-32 rounded-full mx-auto object-cover mb-4"
                       />
-                      <h3 className="text-xl font-bold text-foreground">
+                       <h3 className="text-xl font-bold bg-gradient-to-r from-orange-400 via-blue-400 to-green-400 bg-clip-text text-transparent animate-color-shift">
                         {member.name}
                       </h3>
-                      <Badge variant="secondary" className="mt-2">
+                      <Badge variant="secondary" className="mt-2 bg-gradient-to-r from-blue-400 to-green-400 text-white border-0">
                         {member.role}
                       </Badge>
                     </div>
-                    <p className="text-muted-foreground">
+                    <p className="bg-gradient-to-r from-green-400 via-blue-400 to-orange-400 bg-clip-text text-transparent">
                       {member.bio}
                     </p>
                   </CardContent>
@@ -170,10 +170,10 @@ const About = () => {
         <section className="py-16">
           <div className="container mx-auto px-6">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-foreground mb-4">
-                Trusted by <span className="text-brand-orange">Industry Leaders</span>
+              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 via-blue-400 to-green-400 bg-clip-text text-transparent animate-color-shift">
+                Trusted by <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Industry Leaders</span>
               </h2>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-xl bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent">
                 We're proud to work with amazing brands across various industries
               </p>
             </div>
@@ -190,7 +190,7 @@ const About = () => {
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <p className="text-sm font-medium text-foreground">
+                      <p className="text-sm font-medium bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent">
                         {client.name}
                       </p>
                     </div>
