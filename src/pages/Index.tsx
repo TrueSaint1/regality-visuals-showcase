@@ -11,6 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const Index = () => {
   console.log("Index component loading with carousel");
@@ -20,16 +21,16 @@ const Index = () => {
       
       {/* First Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900/20 via-blue-900/30 to-cyan-900/20 animate-pulse">
-        <div className="container mx-auto px-6 text-center">
-          <div className="space-y-8 animate-fade-in">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-center">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
+          <div className="space-y-6 sm:space-y-8 animate-fade-in">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-center">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent block text-center animate-pulse">
                 Hello. We're Love Regality Productions
               </span>
             </h1>
             
-            <div className="space-y-6 max-w-4xl mx-auto text-center">
-              <p className="text-xl md:text-2xl font-medium leading-relaxed text-center animate-fade-in">
+            <div className="space-y-4 sm:space-y-6 max-w-4xl mx-auto text-center">
+              <p className="text-lg sm:text-xl md:text-2xl font-medium leading-relaxed text-center animate-fade-in">
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">We make commercials.</span>{" "}
                 <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">The kind people</span>{" "}
                 <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">like.</span>
@@ -43,7 +44,14 @@ const Index = () => {
 
       {/* Second Hero Section - Video Carousel */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <Carousel className="absolute inset-0 w-full h-full">
+        <Carousel 
+          className="absolute inset-0 w-full h-full"
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[Autoplay({ delay: 5000 })]}
+        >
           <CarouselContent>
             {/* Video Slide 1 */}
             <CarouselItem>
@@ -110,27 +118,27 @@ const Index = () => {
             </CarouselItem>
           </CarouselContent>
           
-          <CarouselPrevious className="absolute left-8 top-1/2 -translate-y-1/2 z-30 bg-white/20 border-white/40 text-white hover:bg-white/30" />
-          <CarouselNext className="absolute right-8 top-1/2 -translate-y-1/2 z-30 bg-white/20 border-white/40 text-white hover:bg-white/30" />
+          <CarouselPrevious className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-30 bg-white/20 border-white/40 text-white hover:bg-white/30" />
+          <CarouselNext className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-30 bg-white/20 border-white/40 text-white hover:bg-white/30" />
         </Carousel>
         
-        <div className="relative z-20 container mx-auto px-6 text-center">
-          <div className="space-y-16 animate-slide-up">
-            <div className="space-y-8">
-              <h2 className="text-5xl md:text-7xl font-bold text-white leading-tight tracking-tight">
+        <div className="relative z-20 container mx-auto px-4 sm:px-6 text-center">
+          <div className="space-y-12 sm:space-y-16 animate-slide-up">
+            <div className="space-y-6 sm:space-y-8">
+              <h2 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white leading-tight tracking-tight">
                 Bringing Stories to Life
               </h2>
-              <p className="text-xl md:text-2xl text-white/95 max-w-4xl mx-auto leading-relaxed font-light">
+              <p className="text-lg sm:text-xl md:text-2xl text-white/95 max-w-4xl mx-auto leading-relaxed font-light">
                 From concept to creation, we craft visual narratives that captivate, 
                 inspire, and drive results for brands that dare to be different.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex flex-col gap-4 sm:gap-6 justify-center items-center">
               <Button 
                 asChild 
                 size="lg" 
-                className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-10 py-7 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8 sm:px-10 py-6 sm:py-7 text-base sm:text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
               >
                 <Link to="/work">
                   View Our Work
@@ -142,7 +150,7 @@ const Index = () => {
                 asChild 
                 variant="outline" 
                 size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-black font-semibold px-10 py-7 text-lg rounded-full backdrop-blur-sm bg-white/10 transition-all duration-300 transform hover:scale-105"
+                className="border-2 border-white text-white hover:bg-white hover:text-black font-semibold px-8 sm:px-10 py-6 sm:py-7 text-base sm:text-lg rounded-full backdrop-blur-sm bg-white/10 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
               >
                 <Link to="/about">
                   Learn About Us
@@ -154,18 +162,18 @@ const Index = () => {
       </section>
 
       {/* Video Preview Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+      <section className="py-16 sm:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">
               Recent <span className="text-brand-orange">Work</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
               Get a taste of our creative storytelling with these featured projects
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
             {/* Video 1 */}
             <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
               <div className="aspect-video bg-black relative">
@@ -234,8 +242,8 @@ const Index = () => {
             <Button 
               asChild 
               size="lg"
-              className="bg-brand-blue hover:bg-brand-blue/90 text-white font-semibold px-12 py-6 text-lg"
-            >
+                className="bg-brand-blue hover:bg-brand-blue/90 text-white font-semibold px-8 sm:px-12 py-5 sm:py-6 text-base sm:text-lg"
+              >
               <Link to="/work">
                 See More Work
                 <ChevronRight className="ml-2 h-5 w-5" />
