@@ -55,15 +55,15 @@ const About = () => {
               <Button asChild variant="outline" className="flex items-center gap-2">
                 <Link to="/">
                   <Home className="h-4 w-4" />
-                  <span className="bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent animate-color-shift">Home</span>
+                  <span className="text-black">Home</span>
                 </Link>
               </Button>
             </div>
             <div className="text-center">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent animate-color-shift">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-black">
                 About Us
               </h1>
-              <p className="text-xl max-w-2xl mx-auto bg-gradient-to-r from-orange-500 via-blue-500 to-green-500 bg-clip-text text-transparent">
+              <p className="text-xl max-w-2xl mx-auto text-black">
                 We're a passionate team of creatives dedicated to bringing your brand's story to life through compelling visual content.
               </p>
             </div>
@@ -76,20 +76,20 @@ const About = () => {
             <div className="max-w-4xl mx-auto">
               <Card className="p-8 shadow-xl backdrop-blur-xl bg-white/10 border border-white/20">
                 <CardContent className="space-y-6">
-                  <h2 className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-green-400 via-blue-400 to-orange-400 bg-clip-text text-transparent animate-color-shift">
+                  <h2 className="text-3xl font-bold mb-6 text-center text-black">
                     Our Story
                   </h2>
                   
                   <div className="grid md:grid-cols-2 gap-8 items-center">
                     <div className="space-y-4">
-                      <p className="text-lg leading-relaxed bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent">
+                      <p className="text-lg leading-relaxed text-black">
                         Founded in 2018, Love Regality Productions emerged from a simple belief: 
                         every brand has a unique story worth telling. We specialize in creating 
                         commercials that don't just sell products, but build emotional connections 
                         between brands and their audiences.
                       </p>
                       
-                      <p className="text-lg leading-relaxed bg-gradient-to-r from-orange-400 via-blue-400 to-green-400 bg-clip-text text-transparent">
+                      <p className="text-lg leading-relaxed text-black">
                         Our approach combines cutting-edge technology with timeless storytelling 
                         principles. We believe that the best commercials are the ones people 
                         actually want to watch, share, and remember.

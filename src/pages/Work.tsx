@@ -77,15 +77,15 @@ const Work = () => {
               <Button asChild variant="outline" className="flex items-center gap-2">
                 <Link to="/">
                   <Home className="h-4 w-4" />
-                  <span className="bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent animate-color-shift">Home</span>
+                  <span className="text-black">Home</span>
                 </Link>
               </Button>
             </div>
             <div className="text-center">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-blue-400 to-green-400 bg-clip-text text-transparent animate-color-shift">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-black">
                 Our Work
               </h1>
-              <p className="text-xl max-w-2xl mx-auto bg-gradient-to-r from-blue-500 via-green-500 to-orange-500 bg-clip-text text-transparent">
+              <p className="text-xl max-w-2xl mx-auto text-black">
                 Explore our portfolio of commercials and video content that have helped brands connect with their audiences.
               </p>
             </div>
@@ -111,7 +111,7 @@ const Work = () => {
                         className="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 text-white"
                       >
                         <Play className="h-8 w-8 mr-2" />
-                        <span className="bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent">Play Video</span>
+                        <span className="text-black">Play Video</span>
                       </Button>
                     </div>
                   </div>
@@ -119,15 +119,15 @@ const Work = () => {
                   <div className="p-8">
                     <div className="flex justify-between items-start mb-4">
                       <div>
-                        <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-orange-400 via-blue-400 to-green-400 bg-clip-text text-transparent animate-color-shift">
+                        <h3 className="text-2xl font-bold mb-2 text-black">
                           {videos[currentSlide].title}
                         </h3>
-                        <p className="bg-gradient-to-r from-blue-500 via-green-500 to-orange-500 bg-clip-text text-transparent font-semibold">
+                        <p className="text-black font-semibold">
                           Client: {videos[currentSlide].client}
                         </p>
                       </div>
                     </div>
-                    <p className="bg-gradient-to-r from-green-400 via-blue-400 to-orange-400 bg-clip-text text-transparent">
+                    <p className="text-black">
                       {videos[currentSlide].description}
                     </p>
                   </div>

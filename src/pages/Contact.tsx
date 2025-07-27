@@ -125,15 +125,15 @@ Looking forward to hearing from you!`;
               <Button asChild variant="outline" className="flex items-center gap-2">
                 <Link to="/">
                   <Home className="h-4 w-4" />
-                  <span className="bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent animate-color-shift">Home</span>
+                  <span className="text-black">Home</span>
                 </Link>
               </Button>
             </div>
             <div className="text-center">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 via-orange-400 to-blue-400 bg-clip-text text-transparent animate-color-shift">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-black">
                 Get in Touch
               </h1>
-              <p className="text-xl max-w-2xl mx-auto bg-gradient-to-r from-blue-500 via-green-500 to-orange-500 bg-clip-text text-transparent">
+              <p className="text-xl max-w-2xl mx-auto text-black">
                 Ready to bring your vision to life? Let's discuss your project and create something amazing together.
               </p>
             </div>
