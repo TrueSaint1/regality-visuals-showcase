@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/carousel";
 
 const Index = () => {
+  console.log("Index component loading with carousel");
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
