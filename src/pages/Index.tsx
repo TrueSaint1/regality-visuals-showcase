@@ -19,26 +19,26 @@ const Index = () => {
       <Navigation />
       
       {/* First Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-muted to-background">
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900/20 via-blue-900/30 to-cyan-900/20 animate-pulse">
         <div className="container mx-auto px-6 text-center">
           <div className="space-y-8 animate-fade-in">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-center">
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent block text-center">
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent block text-center animate-pulse">
                 Hello. We're Love Regality Productions
               </span>
             </h1>
             
             <div className="space-y-6 max-w-4xl mx-auto text-center">
-              <p className="text-xl md:text-2xl font-medium leading-relaxed text-center">
-                <span className="text-cyan-400">We make commercials.</span>{" "}
-                <span className="text-blue-500">The kind people</span>{" "}
-                <span className="text-orange-500">like.</span>
+              <p className="text-xl md:text-2xl font-medium leading-relaxed text-center animate-fade-in">
+                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">We make commercials.</span>{" "}
+                <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">The kind people</span>{" "}
+                <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">like.</span>
               </p>
             </div>
+            
+            <ScrollDown />
           </div>
         </div>
-        
-        <ScrollDown />
       </section>
 
       {/* Second Hero Section - Video Carousel */}
