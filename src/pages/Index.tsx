@@ -22,30 +22,31 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* First Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900/20 via-blue-900/30 to-cyan-900/20">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center bg-background">
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <div className="space-y-6 sm:space-y-8 text-hero">
-            <div className="hero-content">
+          <div className="space-y-16">
+            <div className="space-y-8">
               <h1 
                 ref={headingRef}
-                className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-center"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight bg-gradient-to-r from-cyan-500 via-purple-500 to-orange-500 bg-clip-text text-transparent"
               >
                 Hello. We're Love Regality Productions
               </h1>
               
-              <div className="space-y-4 sm:space-y-6 max-w-4xl mx-auto text-center mt-6">
-                <p 
-                  ref={paragraphRef}
-                  className="text-lg sm:text-xl md:text-2xl font-medium leading-relaxed text-center"
-                >
-                  We make commercials. The kind people like.
-                </p>
-              </div>
+              <p 
+                ref={paragraphRef}
+                className="text-xl sm:text-2xl md:text-3xl font-medium leading-relaxed text-foreground max-w-4xl mx-auto"
+              >
+                We make commercials. The kind people like.
+              </p>
             </div>
             
-            <div ref={scrollRef} className="scroll-prompt">
-              <ScrollDown />
+            <div ref={scrollRef} className="absolute bottom-16 left-1/2 transform -translate-x-1/2">
+              <div className="text-center">
+                <p className="text-lg text-muted-foreground mb-4">Scroll down to see some.</p>
+                <ScrollDown />
+              </div>
             </div>
           </div>
         </div>
