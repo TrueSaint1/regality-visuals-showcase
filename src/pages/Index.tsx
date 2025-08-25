@@ -12,9 +12,12 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { useHeroAnimation } from "@/hooks/useHeroAnimation";
 
 const Index = () => {
   console.log("Index component loading with carousel");
+  const { headingRef, paragraphRef, scrollRef } = useHeroAnimation();
+  
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -22,22 +25,28 @@ const Index = () => {
       {/* First Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900/20 via-blue-900/30 to-cyan-900/20 animate-pulse">
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <div className="space-y-6 sm:space-y-8 animate-fade-in">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-center">
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent block text-center animate-pulse">
+          <div className="space-y-6 sm:space-y-8 text-hero">
+            <div className="hero-content">
+              <h1 
+                ref={headingRef}
+                className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-center"
+              >
                 Hello. We're Love Regality Productions
-              </span>
-            </h1>
-            
-            <div className="space-y-4 sm:space-y-6 max-w-4xl mx-auto text-center">
-              <p className="text-lg sm:text-xl md:text-2xl font-medium leading-relaxed text-center animate-fade-in">
-                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">We make commercials.</span>{" "}
-                <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">The kind people</span>{" "}
-                <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">like.</span>
-              </p>
+              </h1>
+              
+              <div className="space-y-4 sm:space-y-6 max-w-4xl mx-auto text-center mt-6">
+                <p 
+                  ref={paragraphRef}
+                  className="text-lg sm:text-xl md:text-2xl font-medium leading-relaxed text-center"
+                >
+                  We make commercials. The kind people like.
+                </p>
+              </div>
             </div>
             
-            <ScrollDown />
+            <div ref={scrollRef} className="scroll-prompt">
+              <ScrollDown />
+            </div>
           </div>
         </div>
       </section>
