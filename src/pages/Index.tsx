@@ -23,7 +23,7 @@ const Index = () => {
       <Navigation />
       
       {/* First Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900/20 via-blue-900/30 to-cyan-900/20 animate-pulse">
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900/20 via-blue-900/30 to-cyan-900/20">
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <div className="space-y-6 sm:space-y-8 text-hero">
             <div className="hero-content">
