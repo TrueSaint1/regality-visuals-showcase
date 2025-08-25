@@ -57,7 +57,7 @@ const LoaderScreen: React.FC<LoaderScreenProps> = ({ onComplete }) => {
           logoAnimated ? 'opacity-100' : 'opacity-0'
         }`}>
           <div className="w-16 h-1 bg-muted mx-auto rounded-full overflow-hidden">
-            <div className="h-full bg-gradient-to-r from-primary to-accent animate-pulse"></div>
+            <div className="h-full bg-gradient-to-r from-primary to-accent"></div>
           </div>
         </div>
       </div>
