@@ -42,12 +42,6 @@ const Index = () => {
               </p>
             </div>
             
-            <div ref={scrollRef} className="absolute bottom-16 left-1/2 transform -translate-x-1/2">
-              <div className="text-center">
-                <p className="text-lg text-muted-foreground mb-4">Scroll down to see some.</p>
-                <ScrollDown />
-              </div>
-            </div>
           </div>
         </div>
       </section>
