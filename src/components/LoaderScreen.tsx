@@ -9,16 +9,16 @@ const LoaderScreen: React.FC<LoaderScreenProps> = ({ onComplete }) => {
   const [logoAnimated, setLogoAnimated] = useState(false);
 
   useEffect(() => {
-    // Logo animation timing
+    // Logo appears immediately
     const logoTimer = setTimeout(() => {
       setLogoAnimated(true);
-    }, 500);
+    }, 100);
 
     // Complete animation timing
     const completeTimer = setTimeout(() => {
       setIsVisible(false);
       setTimeout(onComplete, 300);
-    }, 2500);
+    }, 3000);
 
     return () => {
       clearTimeout(logoTimer);
