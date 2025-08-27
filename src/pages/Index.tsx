@@ -416,7 +416,7 @@ const Index = () => {
             <Button 
               asChild 
               size="lg"
-              className="bg-brand-blue hover:bg-brand-blue/90 text-white font-semibold px-6 sm:px-12 py-4 sm:py-6 text-sm sm:text-lg"
+              className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-6 sm:px-12 py-4 sm:py-6 text-sm sm:text-lg"
             >
               <Link to="/work">
                 See More Work
