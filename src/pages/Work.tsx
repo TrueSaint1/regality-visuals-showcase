@@ -3,20 +3,21 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Play, ChevronLeft, ChevronRight, Home } from "lucide-react";
+import { Play, Pause, ChevronLeft, ChevronRight, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Work = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  // Mock video data - replace with actual video URLs
+  // Video data with sample videos
   const videos = [
     {
       id: 1,
       title: "Tech Startup Commercial",
       client: "InnovateTech",
       thumbnail: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=450&fit=crop",
-      videoUrl: "#",
+      videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
       description: "A dynamic commercial showcasing innovative technology solutions"
     },
     {
@@ -24,7 +25,7 @@ const Work = () => {
       title: "Fashion Brand Campaign",
       client: "StyleForward",
       thumbnail: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=450&fit=crop",
-      videoUrl: "#",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
       description: "High-fashion commercial with stunning visuals and storytelling"
     },
     {
@@ -32,7 +33,7 @@ const Work = () => {
       title: "Restaurant Promo",
       client: "Culinary Dreams",
       thumbnail: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&h=450&fit=crop",
-      videoUrl: "#",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
       description: "Mouth-watering food commercial that captures culinary excellence"
     },
     {
@@ -40,7 +41,7 @@ const Work = () => {
       title: "Corporate Training Video",
       client: "GlobalCorp",
       thumbnail: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=450&fit=crop",
-      videoUrl: "#",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
       description: "Professional training video with clear messaging and engagement"
     },
     {
@@ -48,21 +49,28 @@ const Work = () => {
       title: "Non-Profit Campaign",
       client: "Hope Foundation",
       thumbnail: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&h=450&fit=crop",
-      videoUrl: "#",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
       description: "Emotionally powerful campaign for social impact"
     }
   ];
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % videos.length);
+    setIsPlaying(false);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + videos.length) % videos.length);
+    setIsPlaying(false);
   };
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
+    setIsPlaying(false);
+  };
+
+  const togglePlayback = () => {
+    setIsPlaying(!isPlaying);
   };
 
   return (
@@ -100,20 +108,37 @@ const Work = () => {
               <Card className="overflow-hidden shadow-2xl backdrop-blur-xl bg-white/10 border border-white/20">
                 <CardContent className="p-0">
                   <div className="relative aspect-video bg-black">
-                    <img
-                      src={videos[currentSlide].thumbnail}
-                      alt={videos[currentSlide].title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                      <Button
-                        size="lg"
-                        className="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 text-white"
+                    {isPlaying ? (
+                      <video
+                        key={videos[currentSlide].id}
+                        src={videos[currentSlide].videoUrl}
+                        controls
+                        autoPlay
+                        className="w-full h-full object-cover"
+                        poster={videos[currentSlide].thumbnail}
+                        onEnded={() => setIsPlaying(false)}
                       >
-                        <Play className="h-8 w-8 mr-2" />
-                        <span className="bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent">Play Video</span>
-                      </Button>
-                    </div>
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : (
+                      <>
+                        <img
+                          src={videos[currentSlide].thumbnail}
+                          alt={videos[currentSlide].title}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                          <Button
+                            size="lg"
+                            onClick={togglePlayback}
+                            className="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 text-white"
+                          >
+                            <Play className="h-8 w-8 mr-2" />
+                            <span className="bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent">Play Video</span>
+                          </Button>
+                        </div>
+                      </>
+                    )}
                   </div>
                   
                   <div className="p-8">
