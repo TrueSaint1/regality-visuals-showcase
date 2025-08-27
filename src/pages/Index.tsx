@@ -244,12 +244,23 @@ const Index = () => {
                   <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
                     <div className="aspect-video bg-black relative">
                       <video
+                        autoPlay
                         muted
                         loop
                         playsInline
                         className="w-full h-full object-cover"
-                        onMouseEnter={(e) => e.currentTarget.play()}
-                        onMouseLeave={(e) => e.currentTarget.pause()}
+                        onLoadedData={(e) => {
+                          const video = e.currentTarget;
+                          const playFor10Seconds = () => {
+                            video.currentTime = 0;
+                            video.play();
+                            setTimeout(() => {
+                              video.pause();
+                              setTimeout(playFor10Seconds, 1000); // 1 second pause before restart
+                            }, 10000); // Play for 10 seconds
+                          };
+                          playFor10Seconds();
+                        }}
                       >
                         <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
                       </video>
@@ -267,12 +278,23 @@ const Index = () => {
                   <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
                     <div className="aspect-video bg-black relative">
                       <video
+                        autoPlay
                         muted
                         loop
                         playsInline
                         className="w-full h-full object-cover"
-                        onMouseEnter={(e) => e.currentTarget.play()}
-                        onMouseLeave={(e) => e.currentTarget.pause()}
+                        onLoadedData={(e) => {
+                          const video = e.currentTarget;
+                          const playFor10Seconds = () => {
+                            video.currentTime = 0;
+                            video.play();
+                            setTimeout(() => {
+                              video.pause();
+                              setTimeout(playFor10Seconds, 1000); // 1 second pause before restart
+                            }, 10000); // Play for 10 seconds
+                          };
+                          playFor10Seconds();
+                        }}
                       >
                         <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4" />
                       </video>
@@ -290,12 +312,23 @@ const Index = () => {
                   <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
                     <div className="aspect-video bg-black relative">
                       <video
+                        autoPlay
                         muted
                         loop
                         playsInline
                         className="w-full h-full object-cover"
-                        onMouseEnter={(e) => e.currentTarget.play()}
-                        onMouseLeave={(e) => e.currentTarget.pause()}
+                        onLoadedData={(e) => {
+                          const video = e.currentTarget;
+                          const playFor10Seconds = () => {
+                            video.currentTime = 0;
+                            video.play();
+                            setTimeout(() => {
+                              video.pause();
+                              setTimeout(playFor10Seconds, 1000); // 1 second pause before restart
+                            }, 10000); // Play for 10 seconds
+                          };
+                          playFor10Seconds();
+                        }}
                       >
                         <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
                       </video>
