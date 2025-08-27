@@ -46,7 +46,7 @@ const Navigation = () => {
                 className={`text-lg font-medium transition-all duration-300 hover:scale-105 ${
                   isActive(item.path) 
                     ? "bg-gradient-to-r from-orange-400 via-blue-400 to-green-400 bg-clip-text text-transparent" 
-                    : "text-black hover:bg-gradient-to-r hover:from-blue-400 hover:via-green-400 hover:to-orange-400 hover:bg-clip-text hover:text-transparent"
+                    : "text-black hover:bg-gradient-to-r hover:from-brand-orange hover:via-brand-yellow hover:to-brand-green hover:bg-clip-text hover:text-transparent"
                 }`}
                 style={{
                   animationDelay: `${index * 0.1}s`
@@ -79,7 +79,7 @@ const Navigation = () => {
                    className={`text-lg font-medium transition-all duration-300 animate-fade-in ${
                      isActive(item.path) 
                        ? "bg-gradient-to-r from-orange-400 via-blue-400 to-green-400 bg-clip-text text-transparent" 
-                       : "text-black hover:bg-gradient-to-r hover:from-blue-400 hover:via-green-400 hover:to-orange-400 hover:bg-clip-text hover:text-transparent"
+                       : "text-black hover:bg-gradient-to-r hover:from-brand-orange hover:via-brand-yellow hover:to-brand-green hover:bg-clip-text hover:text-transparent"
                    }`}
                   style={{
                     animationDelay: `${index * 0.1}s`

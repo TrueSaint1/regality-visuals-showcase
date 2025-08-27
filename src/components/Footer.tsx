@@ -7,19 +7,19 @@ const Footer = () => {
       name: "LinkedIn",
       icon: Linkedin,
       url: "https://linkedin.com",
-      color: "hover:text-brand-blue",
+      color: "hover:text-brand-yellow",
     },
     {
       name: "YouTube",
       icon: Youtube,
       url: "https://youtube.com",
-      color: "hover:text-red-500",
+      color: "hover:text-brand-orange",
     },
     {
       name: "Instagram",
       icon: Instagram,
       url: "https://instagram.com",
-      color: "hover:text-pink-500",
+      color: "hover:text-brand-yellow",
     },
     {
       name: "WhatsApp",
