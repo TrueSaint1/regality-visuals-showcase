@@ -246,7 +246,7 @@ Looking forward to hearing from you!`;
                       <Button 
                         type="submit" 
                         size="lg" 
-                        className="w-full bg-brand-green hover:bg-brand-green/90 text-white font-semibold"
+                        className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold"
                       >
                         <MessageCircle className="mr-2 h-5 w-5" />
                         Send Message via WhatsApp
@@ -297,7 +297,7 @@ Looking forward to hearing from you!`;
                   </CardContent>
                 </Card>
 
-                <Card className="shadow-lg bg-gradient-to-br from-brand-blue/10 to-brand-green/10">
+                <Card className="shadow-lg bg-gradient-to-br from-brand-orange/10 to-brand-green/10">
                   <CardContent className="p-6">
                     <h3 className="font-bold mb-2 bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent animate-color-shift">
                       Why Choose Us?
