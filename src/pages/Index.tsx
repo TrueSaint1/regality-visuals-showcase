@@ -250,17 +250,11 @@ const Index = () => {
                         playsInline
                         className="w-full h-full object-cover"
                         onLoadedData={(e) => {
+                          console.log('Video 1 loaded, starting playback');
                           const video = e.currentTarget;
-                          const playFor10Seconds = () => {
-                            video.currentTime = 0;
-                            video.play();
-                            setTimeout(() => {
-                              video.pause();
-                              setTimeout(playFor10Seconds, 1000); // 1 second pause before restart
-                            }, 10000); // Play for 10 seconds
-                          };
-                          playFor10Seconds();
+                          video.play().catch(e => console.log('Video 1 play failed:', e));
                         }}
+                        onError={(e) => console.log('Video 1 error:', e)}
                       >
                         <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
                       </video>
@@ -284,17 +278,11 @@ const Index = () => {
                         playsInline
                         className="w-full h-full object-cover"
                         onLoadedData={(e) => {
+                          console.log('Video 2 loaded, starting playback');
                           const video = e.currentTarget;
-                          const playFor10Seconds = () => {
-                            video.currentTime = 0;
-                            video.play();
-                            setTimeout(() => {
-                              video.pause();
-                              setTimeout(playFor10Seconds, 1000); // 1 second pause before restart
-                            }, 10000); // Play for 10 seconds
-                          };
-                          playFor10Seconds();
+                          video.play().catch(e => console.log('Video 2 play failed:', e));
                         }}
+                        onError={(e) => console.log('Video 2 error:', e)}
                       >
                         <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4" />
                       </video>
@@ -318,17 +306,11 @@ const Index = () => {
                         playsInline
                         className="w-full h-full object-cover"
                         onLoadedData={(e) => {
+                          console.log('Video 3 loaded, starting playback');
                           const video = e.currentTarget;
-                          const playFor10Seconds = () => {
-                            video.currentTime = 0;
-                            video.play();
-                            setTimeout(() => {
-                              video.pause();
-                              setTimeout(playFor10Seconds, 1000); // 1 second pause before restart
-                            }, 10000); // Play for 10 seconds
-                          };
-                          playFor10Seconds();
+                          video.play().catch(e => console.log('Video 3 play failed:', e));
                         }}
+                        onError={(e) => console.log('Video 3 error:', e)}
                       >
                         <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
                       </video>
@@ -356,8 +338,15 @@ const Index = () => {
                   loop
                   playsInline
                   className="w-full h-full object-cover"
-                  onMouseEnter={(e) => e.currentTarget.play()}
-                  onMouseLeave={(e) => e.currentTarget.pause()}
+                  onMouseEnter={(e) => {
+                    console.log('Desktop video 1 hover play');
+                    e.currentTarget.play().catch(e => console.log('Desktop video 1 play failed:', e));
+                  }}
+                  onMouseLeave={(e) => {
+                    console.log('Desktop video 1 hover pause');
+                    e.currentTarget.pause();
+                  }}
+                  onError={(e) => console.log('Desktop video 1 error:', e)}
                 >
                   <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
                 </video>
@@ -377,8 +366,15 @@ const Index = () => {
                   loop
                   playsInline
                   className="w-full h-full object-cover"
-                  onMouseEnter={(e) => e.currentTarget.play()}
-                  onMouseLeave={(e) => e.currentTarget.pause()}
+                  onMouseEnter={(e) => {
+                    console.log('Desktop video 2 hover play');
+                    e.currentTarget.play().catch(e => console.log('Desktop video 2 play failed:', e));
+                  }}
+                  onMouseLeave={(e) => {
+                    console.log('Desktop video 2 hover pause');
+                    e.currentTarget.pause();
+                  }}
+                  onError={(e) => console.log('Desktop video 2 error:', e)}
                 >
                   <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4" />
                 </video>
@@ -398,8 +394,15 @@ const Index = () => {
                   loop
                   playsInline
                   className="w-full h-full object-cover"
-                  onMouseEnter={(e) => e.currentTarget.play()}
-                  onMouseLeave={(e) => e.currentTarget.pause()}
+                  onMouseEnter={(e) => {
+                    console.log('Desktop video 3 hover play');
+                    e.currentTarget.play().catch(e => console.log('Desktop video 3 play failed:', e));
+                  }}
+                  onMouseLeave={(e) => {
+                    console.log('Desktop video 3 hover pause');
+                    e.currentTarget.pause();
+                  }}
+                  onError={(e) => console.log('Desktop video 3 error:', e)}
                 >
                   <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
                 </video>
