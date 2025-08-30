@@ -62,7 +62,7 @@ const About = () => {
               <Button asChild variant="outline" className="flex items-center gap-2">
                 <Link to="/">
                   <Home className="h-4 w-4" />
-                  <span className="bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent animate-color-shift">Home</span>
+                  <span className="text-muted-foreground">Home</span>
                 </Link>
               </Button>
             </div>
@@ -70,7 +70,7 @@ const About = () => {
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent animate-color-shift">
                 About Us
               </h1>
-              <p className="text-xl max-w-2xl mx-auto bg-gradient-to-r from-orange-500 via-blue-500 to-green-500 bg-clip-text text-transparent">
+              <p className="text-xl max-w-2xl mx-auto text-muted-foreground">
                 We're a passionate team of creatives dedicated to bringing your brand's story to life through compelling visual content.
               </p>
             </div>
@@ -89,14 +89,14 @@ const About = () => {
                   
                   <div className="grid lg:grid-cols-2 gap-6 md:gap-8 items-start">
                     <div className="space-y-4 order-2 lg:order-1">
-                      <p className="text-base md:text-lg leading-relaxed bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent">
+                      <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
                         Founded in 2018, Love Regality Productions emerged from a simple belief: 
                         every brand has a unique story worth telling. We specialize in creating 
                         commercials that don't just sell products, but build emotional connections 
                         between brands and their audiences.
                       </p>
                       
-                      <p className="text-base md:text-lg leading-relaxed bg-gradient-to-r from-orange-400 via-blue-400 to-green-400 bg-clip-text text-transparent">
+                      <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
                         Our approach combines cutting-edge technology with timeless storytelling 
                         principles. We believe that the best commercials are the ones people 
                         actually want to watch, share, and remember.
@@ -106,7 +106,7 @@ const About = () => {
                     <div className="space-y-4 order-1 lg:order-2">
                       <div className=" p-4 md:p-6 rounded-lg text-white backdrop-blur-xl">
                         <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-green-400 via-blue-400 to-orange-400 bg-clip-text text-transparent">Our Mission</h3>
-                        <p className="text-sm md:text-lg bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent">
+                        <p className="text-sm md:text-lg text-muted-foreground">
                           To create visual content that not only captures attention but also 
                           drives meaningful engagement and lasting brand impact.
                         </p>
@@ -115,15 +115,15 @@ const About = () => {
                       <div className="grid grid-cols-3 gap-2 md:gap-4 text-center">
                         <div>
                           <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">150+</div>
-                          <div className="text-xs md:text-sm bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">Projects</div>
+                          <div className="text-xs md:text-sm text-muted-foreground">Projects</div>
                         </div>
                         <div>
                           <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">50+</div>
-                          <div className="text-xs md:text-sm bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Clients</div>
+                          <div className="text-xs md:text-sm text-muted-foreground">Clients</div>
                         </div>
                         <div>
                           <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">5</div>
-                          <div className="text-xs md:text-sm bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Years</div>
+                          <div className="text-xs md:text-sm text-muted-foreground">Years</div>
                         </div>
                       </div>
                     </div>
@@ -141,7 +141,7 @@ const About = () => {
               <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 via-orange-400 to-blue-400 bg-clip-text text-transparent animate-color-shift">
                 Meet Our Team
               </h2>
-              <p className="text-xl bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent">
+              <p className="text-xl text-muted-foreground">
                 The creative minds behind our award-winning productions
               </p>
             </div>
@@ -172,7 +172,7 @@ const About = () => {
                               {member.role}
                             </Badge>
                           </div>
-                          <p className="bg-gradient-to-r from-green-400 via-blue-400 to-orange-400 bg-clip-text text-transparent flex-grow">
+                          <p className="text-muted-foreground flex-grow">
                             {member.bio}
                           </p>
                         </CardContent>
@@ -194,7 +194,7 @@ const About = () => {
               <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 via-blue-400 to-green-400 bg-clip-text text-transparent animate-color-shift">
                 Trusted by <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Industry Leaders</span>
               </h2>
-              <p className="text-xl bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent">
+              <p className="text-xl text-muted-foreground">
                 We're proud to work with amazing brands across various industries
               </p>
             </div>
@@ -220,7 +220,7 @@ const About = () => {
                                 className="w-full h-full object-cover"
                               />
                             </div>
-                            <p className="text-xs md:text-sm font-medium bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent">
+                            <p className="text-xs md:text-sm font-medium text-muted-foreground">
                               {client.name}
                             </p>
                           </div>

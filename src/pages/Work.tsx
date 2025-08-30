@@ -85,7 +85,7 @@ const Work = () => {
               <Button asChild variant="outline" className="flex items-center gap-2">
                 <Link to="/">
                   <Home className="h-4 w-4" />
-                  <span className="bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent animate-color-shift">Home</span>
+                  <span className="text-muted-foreground">Home</span>
                 </Link>
               </Button>
             </div>
@@ -93,7 +93,7 @@ const Work = () => {
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-blue-400 to-green-400 bg-clip-text text-transparent animate-color-shift">
                 Our Work
               </h1>
-              <p className="text-xl max-w-2xl mx-auto bg-gradient-to-r from-blue-500 via-green-500 to-orange-500 bg-clip-text text-transparent">
+              <p className="text-xl max-w-2xl mx-auto text-muted-foreground">
                 Explore our portfolio of commercials and video content that have helped brands connect with their audiences.
               </p>
             </div>
@@ -147,12 +147,12 @@ const Work = () => {
                         <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-orange-400 via-blue-400 to-green-400 bg-clip-text text-transparent animate-color-shift">
                           {videos[currentSlide].title}
                         </h3>
-                        <p className="bg-gradient-to-r from-blue-500 via-green-500 to-orange-500 bg-clip-text text-transparent font-semibold">
+                        <p className="text-muted-foreground font-semibold">
                           Client: {videos[currentSlide].client}
                         </p>
                       </div>
                     </div>
-                    <p className="bg-gradient-to-r from-green-400 via-blue-400 to-orange-400 bg-clip-text text-transparent">
+                    <p className="text-muted-foreground">
                       {videos[currentSlide].description}
                     </p>
                   </div>

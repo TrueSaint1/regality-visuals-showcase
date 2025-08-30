@@ -125,7 +125,7 @@ Looking forward to hearing from you!`;
               <Button asChild variant="outline" className="flex items-center gap-2">
                 <Link to="/">
                   <Home className="h-4 w-4" />
-                  <span className="bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent animate-color-shift">Home</span>
+                  <span className="text-muted-foreground">Home</span>
                 </Link>
               </Button>
             </div>
@@ -133,7 +133,7 @@ Looking forward to hearing from you!`;
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 via-orange-400 to-blue-400 bg-clip-text text-transparent animate-color-shift">
                 Get in Touch
               </h1>
-              <p className="text-xl max-w-2xl mx-auto bg-gradient-to-r from-blue-500 via-green-500 to-orange-500 bg-clip-text text-transparent">
+              <p className="text-xl max-w-2xl mx-auto text-muted-foreground">
                 Ready to bring your vision to life? Let's discuss your project and create something amazing together.
               </p>
             </div>
@@ -151,7 +151,7 @@ Looking forward to hearing from you!`;
                     <CardTitle className="text-2xl bg-gradient-to-r from-orange-400 via-blue-400 to-green-400 bg-clip-text text-transparent animate-color-shift">
                       Tell us about your project
                     </CardTitle>
-                    <p className="bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent">
+                    <p className="text-muted-foreground">
                       Fill out the form below and we'll get back to you within 24 hours via WhatsApp.
                     </p>
                   </CardHeader>
@@ -275,20 +275,20 @@ Looking forward to hearing from you!`;
                             </div>
                           </div>
                           <div>
-                            <h3 className="font-semibold bg-gradient-to-r from-orange-400 via-blue-400 to-green-400 bg-clip-text text-transparent">
+                            <h3 className="font-semibold text-muted-foreground">
                               {info.title}
                             </h3>
                             {info.action ? (
                               <a
                                 href={info.action}
-                                className="bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent hover:from-orange-400 hover:via-blue-400 hover:to-green-400 transition-all duration-300"
+                                className="text-muted-foreground hover:text-foreground transition-colors duration-300"
                                 target={info.action.startsWith('http') ? '_blank' : undefined}
                                 rel={info.action.startsWith('http') ? 'noopener noreferrer' : undefined}
                               >
                                 {info.content}
                               </a>
                             ) : (
-                              <p className="bg-gradient-to-r from-green-400 via-blue-400 to-orange-400 bg-clip-text text-transparent">{info.content}</p>
+                              <p className="text-muted-foreground">{info.content}</p>
                             )}
                           </div>
                         </div>
@@ -302,7 +302,7 @@ Looking forward to hearing from you!`;
                     <h3 className="font-bold mb-2 bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent animate-color-shift">
                       Why Choose Us?
                     </h3>
-                    <ul className="space-y-2 text-sm bg-gradient-to-r from-orange-400 via-blue-400 to-green-400 bg-clip-text text-transparent">
+                    <ul className="space-y-2 text-sm text-muted-foreground">
                       <li>• 24-hour response time</li>
                       <li>• Free initial consultation</li>
                       <li>• Flexible payment options</li>
