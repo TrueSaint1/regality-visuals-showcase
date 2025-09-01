@@ -43,31 +43,33 @@ const Contact = () => {
       return;
     }
 
-    // Create WhatsApp message
-    const whatsappMessage = `Hi Love Regality Productions! I'm interested in working with you.
+    // Create email message
+    const emailSubject = `New Project Inquiry from ${formData.name}`;
+    const emailBody = `Hi Love Regality Productions! I'm interested in working with you.
 
-*Contact Details:*
+Contact Details:
 Name: ${formData.name}
 Email: ${formData.email}
 ${formData.phone ? `Phone: ${formData.phone}` : ''}
 ${formData.company ? `Company: ${formData.company}` : ''}
 
-*Project Information:*
+Project Information:
 ${formData.projectType ? `Project Type: ${formData.projectType}` : ''}
 ${formData.budget ? `Budget Range: ${formData.budget}` : ''}
 
-*Message:*
+Message:
 ${formData.message}
 
 Looking forward to hearing from you!`;
 
-    // Encode for WhatsApp URL
-    const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappNumber = "1234567890"; // Replace with actual WhatsApp number
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    // Create mailto URL
+    const encodedSubject = encodeURIComponent(emailSubject);
+    const encodedBody = encodeURIComponent(emailBody);
+    const emailAddress = "hello@loveregalityproductions.com";
+    const mailtoUrl = `mailto:${emailAddress}?subject=${encodedSubject}&body=${encodedBody}`;
 
-    // Open WhatsApp
-    window.open(whatsappUrl, '_blank');
+    // Open email client
+    window.location.href = mailtoUrl;
 
     // Reset form
     setFormData({
@@ -82,7 +84,7 @@ Looking forward to hearing from you!`;
 
     toast({
       title: "Success!",
-      description: "Redirecting you to WhatsApp to send your message.",
+      description: "Opening your email client to send the message.",
     });
   };
 
@@ -152,7 +154,7 @@ Looking forward to hearing from you!`;
                       Tell us about your project
                     </CardTitle>
                     <p className="text-muted-foreground">
-                      Fill out the form below and we'll get back to you within 24 hours via WhatsApp.
+                      Fill out the form below and we'll get back to you within 24 hours via email.
                     </p>
                   </CardHeader>
                   <CardContent>
@@ -248,8 +250,8 @@ Looking forward to hearing from you!`;
                         size="lg" 
                         className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold"
                       >
-                        <MessageCircle className="mr-2 h-5 w-5" />
-                        Send Message via WhatsApp
+                        <Mail className="mr-2 h-5 w-5" />
+                        Send Message via Email
                       </Button>
                     </form>
                   </CardContent>
